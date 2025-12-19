@@ -53,7 +53,7 @@ with st.sidebar:
     # Users can only pick from your defined list
     search_kw = st.selectbox("Target Category", SEARCH_TYPES)
     
-    radius = st.slider("Scan Radius (meters)", 500, 5000, 1000)
+    radius = st.slider("Scan Radius (meters)", 500, 15000, 1000)
     
     # The Scan Button
     if st.button("Run Scan", type="primary"):
