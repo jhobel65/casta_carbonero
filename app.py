@@ -45,8 +45,8 @@ with st.sidebar:
     # Dynamic Search Center
     st.subheader("📍 Search Center")
     # Defaulting to Tijuana coordinates
-    search_lat = st.number_input("Latitude", value=32.52044, format="%.4f")
-    search_lng = st.number_input("Longitude", value=-117.01972, format="%.4f")
+    search_lat = st.number_input("Latitude", value=32.52039, format="%.4f")
+    search_lng = st.number_input("Longitude", value=-117.01292, format="%.4f")
     st.caption("Tip: Change these to move your search area.")
     
     # STRICT SEARCH INPUT
