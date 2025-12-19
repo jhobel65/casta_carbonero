@@ -45,15 +45,15 @@ with st.sidebar:
     # Dynamic Search Center
     st.subheader("📍 Search Center")
     # Defaulting to Tijuana coordinates
-    search_lat = st.number_input("Latitude", value=32.52042, format="%.4f")
-    search_lng = st.number_input("Longitude", value=-117.01289, format="%.4f")
+    search_lat = st.number_input("Latitude", value=32.5202749, format="%.5f")
+    search_lng = st.number_input("Longitude", value=-117.0159393, format="%.5f")
     st.caption("Tip: Change these to move your search area.")
     
     # STRICT SEARCH INPUT
     # Users can only pick from your defined list
     search_kw = st.selectbox("Target Category", SEARCH_TYPES)
     
-    radius = st.slider("Scan Radius (meters)", 500, 15000, 1000)
+    radius = st.slider("Scan Radius (meters)", 500, 15000, 1000,500)
     
     # The Scan Button
     if st.button("Run Scan", type="primary"):
@@ -136,7 +136,7 @@ if not df.empty:
     st_folium(m, use_container_width=True, height=500)
     
     # Legend
-    st.caption("📍 Center | 🟢 New | 🔵 Contacted | 🟡 Interested | 🔴 Ignored | ⚪ Closed")
+    st.caption("📍 Casta | 🟢 New | 🔵 Contacted | 🟡 Interested | 🔴 Ignored | ⚪ Closed")
     st.divider()
 
     # 3. THE LEADS LIST (WORK QUEUE)
